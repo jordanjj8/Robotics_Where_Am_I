@@ -1,5 +1,5 @@
 # Robotics_Go_Chase_It
-Project #2 Go Chase It! for [Robotics Software Engineer Nanodegree Program] (https://www.udacity.com/course/robotics-software-engineer--nd209)
+Project #2 Go Chase It! for [Robotics Software Engineer Nanodegree Program](https://www.udacity.com/course/robotics-software-engineer--nd209)
 
 ## Overview 
 In this project, I created two ROS packages: `my_robot` and `ball_chaser` that will be used on Gazebo. The `my_robot` package includes the design of the robot, which also includes the differential drive, lidar & camera sensors, and the gazebo world the robot lives in. The `ball_chaser` package contains two C++ ROS nodes that interact with the robot and makes it chase after a white-colored ball.
