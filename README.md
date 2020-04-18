@@ -30,7 +30,8 @@ Recommended Virtual Machine Alternative Specs
 ## Setup
 1. After installing and meeting the requirements listed above, open up command line.
 2. Create and initialize a catkin workspace:
-``` $ mkdir -p /home/workspace/catkin_ws/src
+``` 
+    $ mkdir -p /home/workspace/catkin_ws/src
     $ cd /home/workspace/catkin_ws/src
     $ catkin_init_workspace
 ```
