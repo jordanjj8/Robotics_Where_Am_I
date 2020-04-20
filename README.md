@@ -21,18 +21,43 @@ In this project, I created two ROS packages: `my_robot` and `ball_chaser` that w
   - make is installed by default for most Linux distros 
 * C++11 Complier (gcc/g++)
 
-Recommended Virtual Machine Alternative Specs
+Recommended Virtual Machine Alternative Specs:
 * Ubuntu 64-bit Disk Image 
 * 2 GB of RAM 
 * 20 GB Disk Space
 * 4 Logical Cores 
 
 ## Setup
-1. After installing and meeting the requirements listed above, open up command line.
+1. After installing and meeting the requirements listed above, open up a terminal.
 2. Create and initialize a catkin workspace:
 ``` 
     $ mkdir -p /home/workspace/catkin_ws/src
     $ cd /home/workspace/catkin_ws/src
     $ catkin_init_workspace
 ```
-2. Clone the project repository & copy the `my_robot` and `ball_chaser` directories into the `src` directory:
+2. Clone the project repository & move the `my_robot` and `ball_chaser` directories into the `src` directory:
+```
+    $ cd /home/workspace/catkin_ws/src
+    $ git clone https://github.com/jordanjj8/Robotics_Go_Chase_It.git
+    $ mv /Robotics_Go_Chase_It/ball_chaser /src/ball_chaser 
+    $ mv /Robotics_Go_Chase_It/my_robot /src/my_robot
+    $ rm -rf Robotics_Go_Chase_It
+```
+3. Navigate back to the catkin workspace and build the executables:
+```
+    $ cd /home/workspace/catkin_ws/
+    $ catkin_make
+```
+4. Source the setup script and launch the launch file. The robot in Gazebo should open up:
+``` 
+    $ cd /home/workspace/catkin_ws/
+    $ source devel/setup.bash
+    $ roslaunch my_robot world.launch 
+```
+5. Now open up another terminal and launch the ball_chaser package. This will enable the robot to chase after the white ball:
+```
+    $ cd /home/workspace/catkin_ws/
+    $ source devel/setup.bash
+    $ roslaunch ball_chaser ball_chaser.launch
+```
+
