@@ -3,10 +3,11 @@ Project #3 Where Am I for [Robotics Software Engineer Nanodegree Program](https:
 
 ## Overview 
 ### Start 
-https://github.com/jordanjj8/Robotics_Where_Am_I/blob/master/End.JPG
+![Start State](https://github.com/jordanjj8/Robotics_Where_Am_I/blob/master/Start.png)
 
 ### End 
-https://github.com/jordanjj8/Robotics_Where_Am_I/blob/master/End.JPG
+![End](https://github.com/jordanjj8/Robotics_Where_Am_I/blob/master/End.JPG)
+
 ## Requirements 
 * [Gazebo](http://gazebosim.org/) any version later than v7.0.0 
 * ROS Kinetic -follow instructions here: [ROS Installation Instructions](http://wiki.ros.org/ROS/Installation)
