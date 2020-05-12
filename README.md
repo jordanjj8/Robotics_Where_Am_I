@@ -32,4 +32,36 @@ Recommended Virtual Machine Alternative Specs:
     $ cd /home/workspace/catkin_ws/src
     $ catkin_init_workspace
 ```
+3. Clone the project repository & move the `my_robot` and `teleop_twist_keyboard` directories into the `src` directory:
+```
+    $ cd /home/workspace/catkin_ws/src
+    $ git clone https://github.com/jordanjj8/Robotics_Where_Am_I.git
+    $ mv Robotics_Where_Am_I/teleop_twist_keyboard /home/workspace/catkin_ws/src/teleop_twist_keyboard 
+    $ mv Robotics_Where_Am_I/my_robot /home/workspace/catkin_ws/src/my_robot
+    $ rm -rf Robotics_Where_Am_I
+```
+4. Navigate back to the catkin workspace and build the executables:
+```
+    $ cd /home/workspace/catkin_ws/
+    $ catkin_make
+```
+5. Source the setup script and launch the launch file. The robot in Gazebo should open up:
+``` 
+    $ cd /home/workspace/catkin_ws/
+    $ source devel/setup.bash
+    $ roslaunch my_robot world.launch 
+```
+6. Now open up another terminal and launch amcl.launch in the my_robot package. This will enable the robot to localize itself in the map.
+```
+    $ cd /home/workspace/catkin_ws/
+    $ source devel/setup.bash
+    $ roslaunch my_robot amcl.launch
+```
+7. (optional) If you wish to navigate the robot manually (via keyboard), follow the instructions:
+```
+    $ cd /home/workspace/catkin_ws/
+    $ source devel/setup.bash
+    $ rosrun teleop_twist_keyboard teleop_twist_keyboard.py
+```
+
 
